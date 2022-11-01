@@ -43,23 +43,27 @@ require 'dbcon.php';
                                 $student = mysqli_fetch_array($query_run);
                                 ?>
                                 <form action="code.php" method="POST">
-                                    <input type="hidden" name="student_id" value="<?= $student['id']; ?>">
+                                    <input type="hidden" name="student_id" value="<?= $student['sl']; ?>">
 
                                     <div class="mb-3">
                                         <label>Student Name</label>
                                         <input type="text" name="name" value="<?=$student['name'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Email</label>
-                                        <input type="email" name="email" value="<?=$student['email'];?>" class="form-control">
+                                        <label>Department</label>
+                                        <input type="email" name="email" value="<?=$student['dep'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Phone</label>
-                                        <input type="text" name="phone" value="<?=$student['phone'];?>" class="form-control">
+                                        <label>Registration</label>
+                                        <input type="text" name="phone" value="<?=$student['reg'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Course</label>
-                                        <input type="text" name="course" value="<?=$student['course'];?>" class="form-control">
+                                        <label>Mobile</label>
+                                        <input type="text" name="course" value="<?=$student['mobile'];?>" class="form-control">
+                                    </div>
+									<div class="mb-3">
+                                        <label>Room</label>
+                                        <input type="text" name="course" value="<?=$student['room'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="update_student" class="btn btn-primary">

@@ -27,12 +27,14 @@ if(isset($_POST['update_student']))
 {
     $student_id = mysqli_real_escape_string($con, $_POST['student_id']);
 
+	$sl = mysqli_real_escape_string($con, $_POST['sl']);
     $name = mysqli_real_escape_string($con, $_POST['name']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $phone = mysqli_real_escape_string($con, $_POST['phone']);
-    $course = mysqli_real_escape_string($con, $_POST['course']);
+    $dep = mysqli_real_escape_string($con, $_POST['dep']);
+    $reg = mysqli_real_escape_string($con, $_POST['reg']);
+    $mobile = mysqli_real_escape_string($con, $_POST['mobile']);
+	$room = mysqli_real_escape_string($con, $_POST['room']);
 
-    $query = "UPDATE students SET name='$name', email='$email', phone='$phone', course='$course' WHERE id='$student_id' ";
+    $query = "UPDATE students SET sl='$sl', name='$name', dep='$dep', reg='$reg', mobile='$mobile', room='$room' WHERE id='$student_id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -53,12 +55,14 @@ if(isset($_POST['update_student']))
 
 if(isset($_POST['save_student']))
 {
+	$sl = mysqli_real_escape_string($con, $_POST['sl']);
     $name = mysqli_real_escape_string($con, $_POST['name']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $phone = mysqli_real_escape_string($con, $_POST['phone']);
-    $course = mysqli_real_escape_string($con, $_POST['course']);
+    $dep = mysqli_real_escape_string($con, $_POST['dep']);
+    $reg = mysqli_real_escape_string($con, $_POST['reg']);
+    $mobile = mysqli_real_escape_string($con, $_POST['mobile']);
+	$room = mysqli_real_escape_string($con, $_POST['room']);
 
-    $query = "INSERT INTO students (name,email,phone,course) VALUES ('$name','$email','$phone','$course')";
+    $query = "INSERT INTO students (sl,name,dep,reg,mobile,room) VALUES ('$sl','$name','$dep','$reg','$mobile','$room')";
 
     $query_run = mysqli_query($con, $query);
     if($query_run)

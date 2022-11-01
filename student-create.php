@@ -31,21 +31,30 @@ session_start();
                     <div class="card-body">
                         <form action="code.php" method="POST">
 
+
+                            <div class="mb-3">
+                                <label>SL</label>
+                                <input type="text" name="sl" class="form-control">
+                            </div>
                             <div class="mb-3">
                                 <label>Student Name</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Email</label>
-                                <input type="email" name="email" class="form-control">
+                                <label>Department</label>
+                                <input type="text" name="dep" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Phone</label>
-                                <input type="text" name="phone" class="form-control">
+                                <label>Registration</label>
+                                <input type="text" name="reg" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Course</label>
-                                <input type="text" name="course" class="form-control">
+                                <label>Mobile</label>
+                                <input type="text" name="mobile" class="form-control">
+                            </div>
+							                            <div class="mb-3">
+                                <label>Room No</label>
+                                <input type="text" name="room" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_student" class="btn btn-primary">Save Student</button>

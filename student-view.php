@@ -40,27 +40,39 @@ require 'dbcon.php';
                                 ?>
                                 
                                     <div class="mb-3">
-                                        <label>Student Name</label>
+                                        <label>SL</label>
+                                        <p class="form-control">
+                                            <?=$student['sl'];?>
+                                        </p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Name</label>
                                         <p class="form-control">
                                             <?=$student['name'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Email</label>
+                                        <label>Department</label>
                                         <p class="form-control">
-                                            <?=$student['email'];?>
+                                            <?=$student['dep'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Phone</label>
+                                        <label>Registration</label>
                                         <p class="form-control">
-                                            <?=$student['phone'];?>
+                                            <?=$student['reg'];?>
+                                        </p>
+                                    </div>
+									                                    <div class="mb-3">
+                                        <label>Mobile</label>
+                                        <p class="form-control">
+                                            <?=$student['mobile'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Course</label>
+                                        <label>Room</label>
                                         <p class="form-control">
-                                            <?=$student['course'];?>
+                                            <?=$student['room'];?>
                                         </p>
                                     </div>
 
